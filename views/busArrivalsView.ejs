@@ -1,0 +1,25 @@
+<!-- views/testView.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Bus Arrivals</title>
+</head>
+
+<comment>element names need updating - placeholders</comment>
+
+<body id="home">
+	<h1>Arrivals for <%= busArrival.stationName%></h1>
+	<ul>
+		<%
+		data.forEach((busArrivals) => { %>
+			<li>
+				<p><%= busArrivals.lineName %> heading to <%= busArrivals.destinationName %> arriving at <%= busArrivals.timeToStation %></p>
+	
+			</li>
+		<% });
+		%>
+	</ul>
+</body>
+</html>
